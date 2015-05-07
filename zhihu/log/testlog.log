@@ -1,0 +1,31 @@
+2015-05-07 14:56:27+0800 [scrapy] INFO: initiating crawler...
+2015-05-07 14:56:28+0800 [scrapy] INFO: Scrapy 0.24.6 started (bot: zhihu)
+2015-05-07 14:56:28+0800 [scrapy] INFO: Optional features available: ssl, http11, django
+2015-05-07 14:56:28+0800 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'zhihu.spiders', 'SPIDER_MODULES': ['zhihu.spiders'], 'USER_AGENT': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.10; rv:36.0) Gecko/20100101 Firefox/36.0', 'BOT_NAME': 'zhihu'}
+2015-05-07 14:56:28+0800 [scrapy] INFO: Enabled extensions: LogStats, TelnetConsole, CloseSpider, WebService, CoreStats, SpiderState
+2015-05-07 14:56:29+0800 [scrapy] INFO: Enabled downloader middlewares: HttpAuthMiddleware, DownloadTimeoutMiddleware, UserAgentMiddleware, RetryMiddleware, DefaultHeadersMiddleware, MetaRefreshMiddleware, HttpCompressionMiddleware, RedirectMiddleware, CookiesMiddleware, ChunkedTransferMiddleware, DownloaderStats
+2015-05-07 14:56:29+0800 [scrapy] INFO: Enabled spider middlewares: HttpErrorMiddleware, OffsiteMiddleware, RefererMiddleware, UrlLengthMiddleware, DepthMiddleware
+2015-05-07 14:56:29+0800 [scrapy] INFO: Enabled item pipelines: 
+2015-05-07 14:56:41+0800 [zhihu_topic] INFO: Spider opened
+2015-05-07 14:56:41+0800 [-] ERROR: Unhandled error in Deferred:
+2015-05-07 14:56:41+0800 [-] Unhandled Error
+	Traceback (most recent call last):
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+	    return _inlineCallbacks(None, gen, Deferred())
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/Library/Python/2.7/site-packages/scrapy/crawler.py", line 66, in start
+	    yield self.engine.open_spider(self._spider, self._start_requests())
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1237, in unwindGenerator
+	    return _inlineCallbacks(None, gen, Deferred())
+	--- <exception caught here> ---
+	  File "/System/Library/Frameworks/Python.framework/Versions/2.7/Extras/lib/python/twisted/internet/defer.py", line 1099, in _inlineCallbacks
+	    result = g.send(result)
+	  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 226, in open_spider
+	    slot = Slot(start_requests, close_if_idle, nextcall, scheduler)
+	  File "/Library/Python/2.7/site-packages/scrapy/core/engine.py", line 27, in __init__
+	    self.start_requests = iter(start_requests)
+	exceptions.TypeError: 'NoneType' object is not iterable
+	
+2015-05-07 15:02:07+0800 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2015-05-07 15:02:08+0800 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
